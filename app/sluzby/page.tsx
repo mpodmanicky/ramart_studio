@@ -13,11 +13,13 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="min-h-screen w-full p-20">
-      <main className="px-32">
-        <h1 className="text-5xl font-sans font-extralight mb-16">Služby</h1>
+    <div className="min-h-screen w-full p-6 md:p-20">
+      <main className="px-0 md:px-32">
+        <h1 className="text-3xl md:text-5xl font-sans font-extralight mb-8 md:mb-16">
+          Služby
+        </h1>
         {/* popis s <p tagom> */}
-        <div className="space-y-8 font-extralight text-md">
+        <div className="space-y-6 md:space-y-8 font-extralight text-base md:text-md">
           <p className="font-sans font-semibold text-md">
             Ponúkame služby v oblasti architektúry, interiérového dizajnu a
             poradenstva v oblasti architektúry a nehnuteľností.

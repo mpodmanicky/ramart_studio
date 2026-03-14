@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="p-20 min-h-screen">
+    <main className="p-6 md:p-20 min-h-screen">
       {/* Nadpis */}
       <div className="w-full flex items-center justify-center">
-        <h1 className="font-sans sm:text-5xl md:text-5xl lg:text-7xl font-extralight mb-12">
+        <h1 className="font-sans text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-extralight mb-8 md:mb-12">
           O nás
         </h1>
       </div>
-      <div className="flex flex-row gap-2 justify-center items-center">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-2 justify-center items-center">
         <div className="items-center">
           <Image
             src="/ramart_logo.png"
@@ -30,7 +30,7 @@ export default function Page() {
             height={200}
           />
         </div>
-        <div className="max-w-lg">
+        <div className="max-w-lg text-center md:text-left px-4 md:px-0">
           <p className="text-md font-sans font-extralight">
             Sme architektonické štúdio mladých architektov lokalizované v
             Banskej Bystrici s pôsobnosťou po celom Slovensku
