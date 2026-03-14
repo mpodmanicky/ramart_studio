@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: "Domov",
+  title: "ramartstudio",
   description:
     "Ramart Studio - Architektonické štúdio v Banskej Bystrici. Realizujeme projekty rodinných domov, rekonštrukcie, interiéry, kaviarne a urbanistické riešenia po celom Slovensku.",
   openGraph: {
