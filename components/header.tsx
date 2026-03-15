@@ -9,7 +9,7 @@ const LINKS = [
 
 export default function Header() {
   return (
-    <div className="px-6 md:px-20 py-6 md:py-10 w-full bg-white flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
+    <div className="px-6 md:px-20 py-6 md:py-10 w-full bg-white dark:bg-gray-900 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
       <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center text-center md:text-left">
         {/*Image logo and architektura/interier/dizajn/ */}
         <Link href="/">
