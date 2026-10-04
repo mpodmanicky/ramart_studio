@@ -1,0 +1,20 @@
+services:
+  ramart-studio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ramart_studio_staging
+    restart: unless-stopped
+    ports:
+      - "${PORT:-7777}:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DATABASE_URI=file:/app/data/payload.db
+      - PAYLOAD_SECRET=${PAYLOAD_SECRET:-ramart_studio_staging_secret_key_2026_ultra_secure}
+      - NEXT_PUBLIC_SERVER_URL=${NEXT_PUBLIC_SERVER_URL:-http://localhost:7777}
+    volumes:
+      # Perzistentná SQLite databáza na serveri (/mnt/ulozisko/ramart/data)
+      - ${STORAGE_DIR:-/mnt/ulozisko/ramart}/data:/app/data
+      # Perzistentné úložisko pre nahrané médiá (/mnt/ulozisko/ramart/uploads)
+      - ${STORAGE_DIR:-/mnt/ulozisko/ramart}/uploads:/app/public/uploads

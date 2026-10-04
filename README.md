@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RAMART ATELIÉR — Architektonické štúdio Ing. arch. Martin Rajčan
 
-## Getting Started
+Moderná, čistá a responzívna webová stránka ateliéru prepojená s **Payload CMS 3.x** systémom pre správu obsahu, portfólia a dopytov.
 
-First, run the development server:
+---
+
+## 🏛️ Dizajnový systém & Filozofia
+
+- **Farby**:
+  - Podkladová: **Bone** (`#f5f4ef`) — teplý architektonický minerálny odtieň (vápenec / omietka)
+  - Doplnkové: **Čierna** (`#0a0b0d`) a **Antracitová** (`#181a1d` / `#23272d`)
+  - Invertovaná pätička: hlboký antracit s autentickým architektonickým **blueprint SVG plánom** s kótami, modulovou sieťou a rohovou pečiatkou
+- **Typografia**: Monumentálne nadpisy (`Space Grotesk`) a technická anotácia (`Space Mono`)
+- **Pravidlá dizajnu**:
+  - Žiadne zaoblenia (`border-radius: 0 !important`)
+  - Žiadne badges / odznaky
+  - Žiadne generické feature rows
+  - Žiadne ikony ani emoji — striktná architektonická typografia (`T /`, `M /`, `A /`)
+  - Geometrické akcenty (zameriavacie krížiky `+`, osové čiary, modulové kóty)
+  - Veľkorysé množstvo negatívneho priestoru (white space) s extrémnymi vizuálmi
+
+---
+
+## 📂 Architektúra stránok
+
+1. **Hlavná stránka (`/`)**:
+   - Monumentálny úvod a architektonické krédo
+   - Informácie o ateliéri a materiálovej pravde (pohľadový betón, lomový kameň, drevo, veľkoformátové sklo)
+   - Výber kľúčových realizácií s priamou výzvou na prezeranie portfólia
+   - Architektonický proces (01 Analýza → 02 Štúdia → 03 PSP & Realizačný projekt → 04 Autorský dozor)
+   - Konverzná sekcia pre získavanie nových investičných zámerov (leads)
+
+2. **Portfólio (`/portfolio`)**:
+   - Kompletný archív všetkých 12 projektov
+   - Typologický filter (`VŠETKY REALIZÁCIE`, `ARCHITEKTÚRA`, `NOVOSTAVBY RD`, `REKONŠTRUKCIE`, `INTERIÉRY`)
+   - Asymetrický architektonický raster s vysokým rozlíšením fotografií
+
+3. **Detail projektu (`/projekty/[slug]`)**:
+   - Veľkoformátový hero vizuál
+   - Technické metadáta (lokalita, rok návrhu, rok realizácie, stav, autorizácia SKA)
+   - Architektonický popis
+   - Výkresová dokumentácia (axonometrie, pôdorysy 1.NP/2.NP, rezy, pohľady)
+   - Fotogaléria detailov stavby
+
+4. **Ateliér (`/atelier`)**:
+   - Náhrada pôvodnej podstránky "O nás"
+   - Profil Ing. arch. Martina Rajčana (Fakulta architektúry STU v Bratislave, autorizácia SKA)
+   - Rozbor práce s modernými materiálmi
+   - Pôvodná adresa `/o-nas` automaticky presmerováva na `/atelier`
+
+5. **Služby (`/sluzby`)**:
+   - Podrobný rozpis fáz od štúdie po autorský dozor a urbanizmus bez generických feature boxov
+
+6. **Kontakt & Získavanie dopytov (`/kontakt`)**:
+   - Interaktívny formulár investičného zámeru napojený na Payload CMS (`inquiries`)
+   - Kontaktné a fakturačné údaje ateliéru
+   - Architektonicky štylizovaná mapa Banskej Bystrice
+
+---
+
+## ⚙️ Správa obsahu: Payload CMS (`/admin`)
+
+Payload CMS 3.x beží priamo v Next.js App Router s lokálnou SQLite databázou (`payload.db`):
+
+- **Administračné rozhranie**: [http://localhost:3000/admin](http://localhost:3000/admin)
+- **Kolekcie**:
+  - **Projects (`projects`)**: Správa portfólia, fotografií, výkresov a metadát
+  - **Media (`media`)**: Nahrávanie obrázkov a výkresov
+  - **Inquiries (`inquiries`)**: Prijaté dopyty a investičné zámery od návštevníkov webu
+  - **Users (`users`)**: Správa administrátorov ateliéru
+
+### Prvé prihlásenie do Payload CMS:
+1. Spustite `npm run dev`
+2. Otvorte v prehliadači `http://localhost:3000/admin`
+3. Vytvorte si svoj prvý administrátorský účet (e-mail a heslo)
+4. Všetky existujúce projekty sa automaticky nasynchronizujú do databázy!
+
+---
+
+## 🚀 Spustenie projektu
 
 ```bash
+# Vývojový server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Produkčný build a kontrola typov
+npm run build
+
+# Produkčné spustenie
+npm run start
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

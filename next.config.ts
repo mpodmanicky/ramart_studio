@@ -1,7 +1,33 @@
+import { withPayload } from "@payloadcms/next/withPayload";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+      },
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/o-nas',
+        destination: '/atelier',
+        permanent: true,
+      },
+      {
+        source: '/projekty',
+        destination: '/portfolio',
+        permanent: true,
+      },
+    ];
+  },
 };
 
-export default nextConfig;
+export default withPayload(nextConfig);
