@@ -166,11 +166,42 @@ async function runSeed() {
       },
     ]
 
+    function textToLexical(text: string) {
+      const paragraphs = text.split('\n\n').filter(Boolean)
+      return {
+        root: {
+          type: 'root',
+          format: '',
+          indent: 0,
+          version: 1,
+          direction: 'ltr',
+          children: paragraphs.map((p) => ({
+            type: 'paragraph',
+            format: '',
+            indent: 0,
+            version: 1,
+            direction: 'ltr',
+            children: [
+              {
+                type: 'text',
+                format: 0,
+                text: p,
+                version: 1,
+              },
+            ],
+          })),
+        },
+      }
+    }
+
     for (const post of defaultPosts) {
       try {
         await payload.create({
           collection: 'posts',
-          data: post as any,
+          data: {
+            ...post,
+            content: textToLexical(post.content),
+          } as any,
         })
         console.log(`  ✓ Vytvorený článok: ${post.title}`)
       } catch (err) {

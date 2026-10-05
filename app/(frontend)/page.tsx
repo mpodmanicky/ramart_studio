@@ -1,10 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { getProjects, getPageBySlug } from '@/lib/payload'
+import { getProjects } from '@/lib/payload'
 import { FadeIn, StaggerContainer } from '@/components/motion/fade-in'
 import HomeProjectMosaic from '@/components/home-project-mosaic'
-import RenderBlocks from '@/components/blocks/render-blocks'
 
 export const metadata: Metadata = {
   title: 'RAMART ATELIÉR | Architektúra & Realizácie Ing. arch. Martin Rajčan',
@@ -13,20 +12,7 @@ export const metadata: Metadata = {
 }
 
 export default async function HomePage() {
-  const [allProjects, homePageDoc] = await Promise.all([
-    getProjects(),
-    getPageBySlug('home'),
-  ])
-
-  // Ak má stránka v Payload CMS definované dynamické bloky (Blocks), vykreslíme ich priamo
-  if (homePageDoc?.layout && homePageDoc.layout.length > 0) {
-    return (
-      <main className="min-h-screen bg-[#f5f4ef] text-[#0a0b0d]">
-        <RenderBlocks blocks={homePageDoc.layout} projects={allProjects} />
-      </main>
-    )
-  }
-
+  const allProjects = await getProjects()
   const featuredProjects = allProjects.slice(0, 4)
 
   return (
@@ -43,9 +29,6 @@ export default async function HomePage() {
             <div className="flex items-center gap-3">
               <span className="w-1.5 h-1.5 bg-[#0a0b0d]" />
               <span>ARCHITEKTONICKÝ ATELIÉR / BANSKÁ BYSTRICA</span>
-            </div>
-            <div>
-              <span>AUTORIZOVANÝ ARCHITEKT ING. ARCH. MARTIN RAJČAN / SKA</span>
             </div>
           </div>
         </FadeIn>
@@ -112,7 +95,7 @@ export default async function HomePage() {
       {/* 2. STUDIO HIGHLIGHTS & KEY NUMBERS */}
       {/* ──────────────────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 px-6 sm:px-10 lg:px-16 max-w-[1720px] mx-auto border-b border-[#ded9cd]">
-        <StaggerContainer staggerDelay={0.15} className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 font-mono">
+        <StaggerContainer staggerDelay={0.15} className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 font-mono">
           <FadeIn direction="up">
             <div className="space-y-2 border-l border-[#ded9cd] pl-6">
               <span className="text-3xl sm:text-4xl md:text-5xl font-light text-[#0a0b0d] block">
@@ -131,17 +114,6 @@ export default async function HomePage() {
               </span>
               <span className="text-xs text-[#737882] tracking-widest uppercase block">
                 ZDOKUMENTOVANÝCH REALIZÁCIÍ
-              </span>
-            </div>
-          </FadeIn>
-
-          <FadeIn direction="up" delay={0.2}>
-            <div className="space-y-2 border-l border-[#ded9cd] pl-6">
-              <span className="text-3xl sm:text-4xl md:text-5xl font-light text-[#0a0b0d] block">
-                SKA
-              </span>
-              <span className="text-xs text-[#737882] tracking-widest uppercase block">
-                AUTORIZOVANÝ ARCHITEKT
               </span>
             </div>
           </FadeIn>
@@ -197,7 +169,7 @@ export default async function HomePage() {
               href="/portfolio"
               className="font-mono text-xs tracking-[0.25em] uppercase border-b border-[#0a0b0d] pb-1 text-[#0a0b0d] hover:text-[#525760] transition-colors"
             >
-              PRESKÚMAŤ VŠETKY REALIZÁCIE (12) →
+              PRESKÚMAŤ VŠETKY REALIZÁCIE →
             </Link>
           </div>
         </FadeIn>
@@ -369,7 +341,7 @@ export default async function HomePage() {
                 <p className="text-[#0a0b0d] font-medium">LAZOVNÁ 43, 974 01 BANSKÁ BYSTRICA</p>
                 <p>M / MARTIN@RAMARTSTUDIO.SK</p>
                 <p>T / +421 908 477 417</p>
-                <p className="pt-2 text-[11px] text-[#88909e]">POBOČKA & PÔSOBENIE: CELÉ SLOVENSKO</p>
+                <p className="pt-2 text-[11px] text-[#88909e]">PÔSOBENIE: CELÉ SLOVENSKO</p>
               </div>
             </div>
           </div>

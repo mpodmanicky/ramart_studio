@@ -68,3 +68,144 @@ body {
 .architectural-scroll::-webkit-scrollbar-thumb:hover {
   background-color: rgba(245, 244, 239, 0.6);
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+ * Lexical RichText Architectural Editorial Styling
+ * ───────────────────────────────────────────────────────────────────────────── */
+.rich-text-content {
+  color: #1b1e23;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.rich-text-content > *:first-child {
+  margin-top: 0 !important;
+}
+
+.rich-text-content > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.rich-text-content p {
+  margin-bottom: 1.75rem;
+  font-size: 1.125rem;
+  line-height: 1.85;
+}
+
+.rich-text-content h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: #0a0b0d;
+  margin-top: 3.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #ded9cd;
+}
+
+.rich-text-content h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: #0a0b0d;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+.rich-text-content h4 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #0a0b0d;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.rich-text-content strong,
+.rich-text-content b {
+  font-weight: 600;
+  color: #0a0b0d;
+}
+
+.rich-text-content em,
+.rich-text-content i {
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+.rich-text-content u {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(10, 11, 13, 0.4);
+}
+
+.rich-text-content ul {
+  list-style-type: square;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  padding-left: 1.75rem;
+  space-y: 0.75rem;
+}
+
+.rich-text-content ol {
+  list-style-type: decimal;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  padding-left: 1.75rem;
+  space-y: 0.75rem;
+}
+
+.rich-text-content li {
+  margin-bottom: 0.5rem;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.rich-text-content blockquote {
+  border-left: 2px solid #0a0b0d;
+  padding-left: 1.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-family: var(--font-serif);
+  color: #2a2d33;
+  line-height: 1.6;
+}
+
+.rich-text-content a {
+  color: #0a0b0d;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(10, 11, 13, 0.4);
+  transition: text-decoration-color 0.2s ease;
+}
+
+.rich-text-content a:hover {
+  text-decoration-color: #0a0b0d;
+}
+
+.rich-text-content figure,
+.rich-text-content img {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.rich-text-content figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #737882;
+  margin-top: 0.75rem;
+}

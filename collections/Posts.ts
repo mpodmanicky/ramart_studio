@@ -1,4 +1,19 @@
 import type { CollectionConfig } from 'payload'
+import {
+  lexicalEditor,
+  HeadingFeature,
+  ParagraphFeature,
+  BoldFeature,
+  ItalicFeature,
+  UnderlineFeature,
+  UnorderedListFeature,
+  OrderedListFeature,
+  BlockquoteFeature,
+  UploadFeature,
+  LinkFeature,
+  FixedToolbarFeature,
+  InlineToolbarFeature,
+} from '@payloadcms/richtext-lexical'
 
 export const Posts: CollectionConfig = {
   slug: 'posts',
@@ -66,9 +81,38 @@ export const Posts: CollectionConfig = {
     },
     {
       name: 'content',
-      type: 'textarea',
-      label: 'Obsah článku (odseky)',
+      type: 'richText',
+      label: 'Obsah článku (RichText Editor)',
       required: true,
+      editor: lexicalEditor({
+        features: ({ defaultFeatures }) => [
+          ...defaultFeatures,
+          HeadingFeature({ enabledHeadingSizes: ['h2', 'h3', 'h4'] }),
+          ParagraphFeature(),
+          BoldFeature(),
+          ItalicFeature(),
+          UnderlineFeature(),
+          UnorderedListFeature(),
+          OrderedListFeature(),
+          BlockquoteFeature(),
+          UploadFeature({
+            collections: {
+              media: {
+                fields: [
+                  {
+                    name: 'caption',
+                    type: 'text',
+                    label: 'Popis obrázka (voliteľné)',
+                  },
+                ],
+              },
+            },
+          }),
+          LinkFeature(),
+          FixedToolbarFeature(),
+          InlineToolbarFeature(),
+        ],
+      }),
     },
     {
       name: 'author',

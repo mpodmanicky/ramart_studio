@@ -269,7 +269,21 @@ export interface Post {
   category: 'architektúra' | 'materiály' | 'realizácie' | 'proces';
   coverImage: number | Media;
   excerpt: string;
-  content: string;
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
   author?: string | null;
   featured?: boolean | null;
   updatedAt: string;
@@ -288,7 +302,7 @@ export interface Project {
   slug: string;
   categories?: ('architektúra' | 'interiér' | 'dizajn' | 'novostavba' | 'rekonštrukcia' | 'urbanizmus')[] | null;
   /**
-   * Nahrajte novú fotografiu alebo vyberte z knižnice Media
+   * Nahrajte novú fotografiu zo svojho počítača alebo vyberte z knižnice Media.
    */
   image: number | Media;
   location?: string | null;
@@ -300,7 +314,8 @@ export interface Project {
   order?: number | null;
   gallery?:
     | {
-        image: number | Media;
+        image?: (number | null) | Media;
+        imageUrl?: string | null;
         caption?: string | null;
         id?: string | null;
       }[]
@@ -310,7 +325,8 @@ export interface Project {
         title: string;
         images?:
           | {
-              image: number | Media;
+              image?: (number | null) | Media;
+              imageUrl?: string | null;
               id?: string | null;
             }[]
           | null;
@@ -600,6 +616,7 @@ export interface ProjectsSelect<T extends boolean = true> {
     | T
     | {
         image?: T;
+        imageUrl?: T;
         caption?: T;
         id?: T;
       };
@@ -611,6 +628,7 @@ export interface ProjectsSelect<T extends boolean = true> {
           | T
           | {
               image?: T;
+              imageUrl?: T;
               id?: T;
             };
         id?: T;

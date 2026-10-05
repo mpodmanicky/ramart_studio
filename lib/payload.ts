@@ -11,7 +11,7 @@ export interface Post {
   category: string
   coverImage: string
   excerpt: string
-  content: string
+  content: any
   author: string
   featured?: boolean
 }
@@ -194,6 +194,34 @@ const INITIAL_POSTS = [
   },
 ]
 
+export function textToLexical(text: string) {
+  const paragraphs = text.split('\n\n').filter(Boolean)
+  return {
+    root: {
+      type: 'root',
+      format: '',
+      indent: 0,
+      version: 1,
+      direction: 'ltr',
+      children: paragraphs.map((p) => ({
+        type: 'paragraph',
+        format: '',
+        indent: 0,
+        version: 1,
+        direction: 'ltr',
+        children: [
+          {
+            type: 'text',
+            format: 0,
+            text: p,
+            version: 1,
+          },
+        ],
+      })),
+    },
+  }
+}
+
 export async function getPosts(): Promise<Post[]> {
   try {
     const payload = await getPayloadClient()
@@ -214,7 +242,7 @@ export async function getPosts(): Promise<Post[]> {
                 category: post.category as any,
                 coverImage: post.coverImage as any,
                 excerpt: post.excerpt,
-                content: post.content,
+                content: textToLexical(post.content) as any,
                 author: post.author,
                 featured: post.featured,
               } as any,

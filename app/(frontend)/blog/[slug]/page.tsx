@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getPosts, getPostBySlug } from '@/lib/payload'
 import { FadeIn } from '@/components/motion/fade-in'
+import RichText from '@/components/rich-text'
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
@@ -44,9 +45,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const allPosts = await getPosts()
   const otherPosts = allPosts.filter((p) => p.slug !== post.slug).slice(0, 2)
-
-  // Split content into clean paragraphs
-  const paragraphs = post.content.split('\n\n').filter(Boolean)
 
   return (
     <article className="pt-28 md:pt-36 pb-32">
@@ -121,13 +119,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </div>
 
-          {/* Right Column: Paragraphs */}
-          <div className="lg:col-span-8 max-w-3xl space-y-8 text-base sm:text-xl font-light text-[#1b1e23] leading-relaxed">
-            {paragraphs.map((para, idx) => (
-              <p key={idx} className="whitespace-pre-line">
-                {para}
-              </p>
-            ))}
+          {/* Right Column: RichText Content */}
+          <div className="lg:col-span-8 max-w-3xl">
+            <RichText data={post.content} />
           </div>
         </div>
 
