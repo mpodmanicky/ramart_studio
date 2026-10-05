@@ -33,5 +33,11 @@ fi
 # Ensure permissions
 chmod -R 775 /app/data /app/public/uploads 2>/dev/null || true
 
+# 3. Verify and auto-repair database integrity (e.g. non-JSON posts content)
+if [ -f /app/scripts/repair-db.mjs ]; then
+  echo "🔧 Running database integrity check..."
+  node /app/scripts/repair-db.mjs || true
+fi
+
 echo "🚀 Starting Ramart Studio on port ${PORT:-3000} (mapped to host)..."
 exec "$@"

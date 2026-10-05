@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seed": "tsx scripts/seed.ts"
+    "seed": "tsx scripts/seed.ts",
+    "repair": "node scripts/repair-db.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.6",
