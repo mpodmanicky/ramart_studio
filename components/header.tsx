@@ -8,7 +8,7 @@ const NAVIGATION = [
   { href: '/portfolio', label: 'PORTFÓLIO' },
   { href: '/atelier', label: 'ATELIÉR' },
   { href: '/sluzby', label: 'SLUŽBY' },
-  { href: '/blog', label: 'ŽURNÁL' },
+  { href: '/blog', label: 'PRÍSPEVKY' },
   { href: '/kontakt', label: 'KONTAKT' },
 ]
 
@@ -111,7 +111,7 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(false)}
             className="block text-center border border-[#0a0b0d] bg-[#0a0b0d] text-[#f5f4ef] py-3 text-xs font-mono tracking-[0.25em] uppercase"
           >
-            INICIE VÁŠHO PROJEKTU
+            VÁŠ PROJEKT
           </Link>
         </div>
       )}

@@ -63,7 +63,6 @@ export default function Footer() {
             </p>
             <div className="pt-2 font-mono text-[11px] text-[#78808d] space-y-1">
               <p>AUTORIZOVANÝ ARCHITEKT SKA</p>
-              <p>REGISTRAČNÉ ČÍSLO: 2013</p>
             </div>
           </div>
 
@@ -96,11 +95,6 @@ export default function Footer() {
               <li>
                 <Link href="/kontakt" className="hover:text-[#f5f4ef] transition-colors">
                   05 / KONTAKT & ZADANIE
-                </Link>
-              </li>
-              <li>
-                <Link href="/admin" className="text-[#656d7a] hover:text-[#9ba2af] transition-colors">
-                  06 / PAYLOAD CMS SPRÁVA
                 </Link>
               </li>
             </ul>
