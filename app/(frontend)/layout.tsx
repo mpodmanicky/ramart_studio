@@ -56,11 +56,13 @@ export default function FrontendLayout({
 }) {
   return (
     <html lang="sk">
-      <Header />
       <body className="min-h-screen flex flex-col bg-gunpowder antialiased selection:bg-bone selection:text-anthracite">
-        {children}
+        <Header />
+        <div className="flex-1">
+          {children}
+        </div>
+        <Footer />
       </body>
-      <Footer />
     </html>
   )
 }

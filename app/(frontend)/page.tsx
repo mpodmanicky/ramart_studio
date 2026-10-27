@@ -1,9 +1,9 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { getProjects } from '@/lib/payload'
 import { FadeIn, StaggerContainer } from '@/components/motion/fade-in'
 import HomeProjectMosaic from '@/components/home-project-mosaic'
+import HeroSection from '@/components/hero-section'
 
 export const metadata: Metadata = {
   title: 'RAMART ATELIÉR | Architektúra & Realizácie Ing. arch. Martin Rajčan',
@@ -17,59 +17,13 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="relative w-full border-b border-charcoal">
-        {/* Large Hero Project Feature */}
-            <div className="asbolute w-full h-[35vh] overflow-hidden select-none">
-              <Image
-                src="/projects/rd-zarnovica.jpg"
-                alt="Rodinný dom Žarnovica - Ramart Ateliér"
-                fill
-                priority
-                unoptimized
-                className="object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-radial from-gunpowder/50 to-gunpowder" />
-            </div>
-        {/* Monumental Headline */}
-        <div className="relative flex flex-col items-center justify-center space-y-8 z-10 text-center mb-16 md:mb-24">
-          <FadeIn duration={0.9} delay={0.1}>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tighter leading-[0.96] text-foreground">
-              RAMART<br />
-              <span className="text-[#68707d]">STUDIO</span> <br />
-            </h1>
-          </FadeIn>
-
-          <FadeIn duration={0.8} delay={0.25}>
-            <div className="gap-8 pt-6 px-6">
-              <div className="lg:col-span-8">
-                <p className="text-lg sm:text-xl md:text-2xl font-light text-charcoal leading-relaxed max-w-3xl">
-                  Navrhujeme rodinné domy, rekonštrukcie a prémiové interiéry. Pracujeme s poctivými
-                  modernými materiálmi — surový betón, prírodný kameň, oceľ a masívne drevo.
-                  Každá stavba vzniká na mieru topografii pozemku a životnému štýlu investora.
-                </p>
-              </div>
-
-              <div className="mt-5 flex flex-col lg:flex-row md:flex-row items-center justify-center gap-4 font-mono text-xs">
-                <Link
-                  href="/portfolio"
-                  className="inline-flex items-center gap-3 border-[0.5] border-charcoal rounded-full bg-gunpowder/60 text-charcoal hover:bg-transparent hover:text-white px-8 py-4 tracking-[0.25em] uppercase transition-all duration-300"
-                >
-                  PREZRIEŤ PORTFÓLIO →
-                </Link>
-                <span className="tracking-widest uppercase text-[14px] text-[#737882]">
-                  12 KOMPLETNÝCH ARCHITEKTONICKÝCH REALIZÁCIÍ
-                </span>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* ──────────────────────────────────────────────────────────── */}
       {/* 2. STUDIO HIGHLIGHTS & KEY NUMBERS */}
       {/* ──────────────────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 px-6 sm:px-10 lg:px-16 max-w-[1720px] mx-auto">
-        <StaggerContainer staggerDelay={0.15} className="flex flex-col md:flex-row lg:flex-row gap-8 md:gap-12 font-mono">
+        <StaggerContainer staggerDelay={0.15} className="w-full align-start text-center justify-center items-center flex flex-col md:flex-row lg:flex-row gap-8 md:gap-12 font-mono">
           <FadeIn direction="up">
             <div className="space-y-2 border-l border-charcoal pl-6">
               <span className="text-3xl sm:text-4xl md:text-5xl font-light text-white block">
@@ -114,7 +68,7 @@ export default async function HomePage() {
         <FadeIn>
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-16 md:mb-24 border-b border-[#ded9cd] pb-8">
             <div className="space-y-3">
-              <span className="font-mono text-xs tracking-[0.3em] uppercase text-[#737882] block">
+              <span className="font-mono text-xs tracking-[0.3em] uppercase text-charcoal block">
                 NIEČO Z ATELIÉRU
               </span>
               <h2 className="text-3xl sm:text-5xl md:text-6xl font-light uppercase tracking-tight text-white">
@@ -123,7 +77,7 @@ export default async function HomePage() {
             </div>
             <Link
               href="/portfolio"
-              className="font-mono text-xs tracking-[0.25em] uppercase border-[0.5] border-charcoal rounded-full px-6 py-3.5 hover:bg-charcoal hover:text-[#f5f4ef] transition-all"
+              className="font-mono text-xs tracking-[0.25em] uppercase border-t-[0.5] border-charcoal rounded-full px-6 py-3.5 hover:bg-charcoal hover:text-[#f5f4ef] transition-all"
             >
               OTVORIŤ CELÉ PORTFÓLIO →
             </Link>
@@ -215,7 +169,7 @@ export default async function HomePage() {
       {/* ──────────────────────────────────────────────────────────── */}
       {/* 5. ARCHITECTURAL PROCESS ROADMAP */}
       {/* ──────────────────────────────────────────────────────────── */}
-      <section className="py-24 md:py-36 px-6 sm:px-10 lg:px-16 max-w-[1720px] mx-auto border-b border-[#ded9cd]">
+      <section className="py-24 md:py-36 px-6 sm:px-10 lg:px-16 max-w-[1720px] mx-auto">
 
         <FadeIn>
           <div className="space-y-4 mb-16 md:mb-20">
@@ -233,7 +187,7 @@ export default async function HomePage() {
             <div className="py-8 md:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline">
               <div className="lg:col-span-2 font-mono text-xs tracking-widest text-[#737882]">FÁZA 01</div>
               <div className="lg:col-span-4 text-xl font-light uppercase text-charcoal">Analýza pozemku & Zadanie</div>
-              <div className="lg:col-span-6 text-sm font-light text-[#525760]">
+              <div className="lg:col-span-6 text-sm font-light text-charcoal/50">
                 Posúdenie orientácie, sklonu parcely, územných regulatívov a definovanie dispozičných priorít.
               </div>
             </div>
@@ -243,7 +197,7 @@ export default async function HomePage() {
             <div className="py-8 md:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline">
               <div className="lg:col-span-2 font-mono text-xs tracking-widest text-[#737882]">FÁZA 02</div>
               <div className="lg:col-span-4 text-xl font-light uppercase text-charcoal">Architektonická štúdia</div>
-              <div className="lg:col-span-6 text-sm font-light text-[#525760]">
+              <div className="lg:col-span-6 text-sm font-light text-charcoal/50">
                 Hmotový koncept, 3D vizualizácie, priestorové axonometrie a dispozičné riešenia všetkých podlaží.
               </div>
             </div>
@@ -253,7 +207,7 @@ export default async function HomePage() {
             <div className="py-8 md:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline">
               <div className="lg:col-span-2 font-mono text-xs tracking-widest text-[#737882]">FÁZA 03</div>
               <div className="lg:col-span-4 text-xl font-light uppercase text-charcoal">Projekt PSP & Realizácia</div>
-              <div className="lg:col-span-6 text-sm font-light text-[#525760]">
+              <div className="lg:col-span-6 text-sm font-light text-charcoal/50">
                 Kompletná projektová dokumentácia pre povolenie a realizačné výkresy detailov pre zhotoviteľa.
               </div>
             </div>
@@ -263,7 +217,7 @@ export default async function HomePage() {
             <div className="py-8 md:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline">
               <div className="lg:col-span-2 font-mono text-xs tracking-widest text-[#737882]">FÁZA 04</div>
               <div className="lg:col-span-4 text-xl font-light uppercase text-charcoal">Autorský dozor na stavbe</div>
-              <div className="lg:col-span-6 text-sm font-light text-[#525760]">
+              <div className="lg:col-span-6 text-sm font-light text-charcoal/50">
                 Pravidelná osobná kontrola dodržania projektu, presnosti detailov a remeselnej kvality prevedenia.
               </div>
             </div>
