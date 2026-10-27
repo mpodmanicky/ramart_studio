@@ -61,14 +61,14 @@ export default async function ProjectDetailPage({ params }: Props) {
       : allProjects[0]
 
   return (
-    <main className="min-h-screen bg-[#f5f4ef] text-[#0a0b0d] pt-12 md:pt-20 pb-32">
+    <main className="min-h-screen text-white pt-12 md:pt-20 pb-32">
       <div className="max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 space-y-16 md:space-y-24">
-        
+
         {/* Navigation Breadcrumb */}
-        <div className="flex items-center justify-between border-b border-[#ded9cd] pb-6 font-mono text-xs uppercase tracking-[0.25em] text-[#737882]">
+        <div className="flex items-center justify-between border-b border-charcoal pb-6 font-mono text-xs uppercase tracking-[0.25em] text-white">
           <Link
             href="/portfolio"
-            className="hover:text-[#0a0b0d] transition-colors"
+            className="hover:text-charcoal transition-colors"
           >
             ← SPÄŤ NA PORTFÓLIO
           </Link>
@@ -79,10 +79,10 @@ export default async function ProjectDetailPage({ params }: Props) {
 
         {/* Project Header (Monumental typography with generous space) */}
         <div className="space-y-6 max-w-5xl">
-          <div className="font-mono text-xs text-[#737882] tracking-[0.3em] uppercase">
+          <div className="font-mono text-xs text-charcoal tracking-[0.3em] uppercase">
             ARCHITEKTONICKÁ REALIZÁCIA
           </div>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light uppercase tracking-tight text-[#0a0b0d] leading-[0.98]">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight text-white leading-[0.98]">
             {project.title}
           </h1>
         </div>
@@ -91,40 +91,40 @@ export default async function ProjectDetailPage({ params }: Props) {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 border-y border-[#ded9cd] py-6 font-mono text-xs">
           {project.location && (
             <div className="space-y-1">
-              <span className="text-[10px] text-[#88909e] uppercase tracking-wider block">LOKALITA</span>
-              <span className="text-[#0a0b0d] font-sans font-normal text-sm">{project.location}</span>
+              <span className="text-[10px] text-white uppercase tracking-wider block">LOKALITA</span>
+              <span className="text-charcoal font-sans font-normal text-sm">{project.location}</span>
             </div>
           )}
 
           {project.yearRealization && (
             <div className="space-y-1">
-              <span className="text-[10px] text-[#88909e] uppercase tracking-wider block">ROK REALIZÁCIE</span>
-              <span className="text-[#0a0b0d] font-sans font-normal text-sm">{project.yearRealization}</span>
+              <span className="text-[10px] text-white uppercase tracking-wider block">ROK REALIZÁCIE</span>
+              <span className="text-charcoal font-sans font-normal text-sm">{project.yearRealization}</span>
             </div>
           )}
 
           {project.yearDesign && !project.yearRealization && (
             <div className="space-y-1">
-              <span className="text-[10px] text-[#88909e] uppercase tracking-wider block">ROK NÁVRHU</span>
-              <span className="text-[#0a0b0d] font-sans font-normal text-sm">{project.yearDesign}</span>
+              <span className="text-[10px] text-white uppercase tracking-wider block">ROK NÁVRHU</span>
+              <span className="text-charcoal font-sans font-normal text-sm">{project.yearDesign}</span>
             </div>
           )}
 
           {project.state && (
             <div className="space-y-1">
-              <span className="text-[10px] text-[#88909e] uppercase tracking-wider block">STAV</span>
-              <span className="text-[#0a0b0d] font-sans font-normal text-sm">{project.state}</span>
+              <span className="text-[10px] text-white uppercase tracking-wider block">STAV</span>
+              <span className="text-charcoal font-sans font-normal text-sm">{project.state}</span>
             </div>
           )}
 
           <div className="space-y-1">
-            <span className="text-[10px] text-[#88909e] uppercase tracking-wider block">TYPOLÓGIA</span>
-            <span className="text-[#0a0b0d] font-sans font-normal text-sm">{project.categories.join(' / ')}</span>
+            <span className="text-[10px] text-white uppercase tracking-wider block">TYPOLÓGIA</span>
+            <span className="text-charcoal font-sans font-normal text-sm">{project.categories.join(' / ')}</span>
           </div>
 
           <div className="space-y-1">
-            <span className="text-[10px] text-[#88909e] uppercase tracking-wider block">AUTOR</span>
-            <span className="text-[#0a0b0d] font-sans font-normal text-sm">Ing. arch. Martin Rajčan</span>
+            <span className="text-[10px] text-white uppercase tracking-wider block">AUTOR</span>
+            <span className="text-charcoal font-sans font-normal text-sm">Ing. arch. Martin Rajčan</span>
           </div>
         </div>
 
@@ -143,10 +143,10 @@ export default async function ProjectDetailPage({ params }: Props) {
         {/* Architectural Narrative */}
         {project.description && (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 pt-6">
-            <div className="lg:col-span-4 font-mono text-xs text-[#737882] tracking-[0.25em] uppercase">
+            <div className="lg:col-span-4 font-mono text-xs text-charcoal tracking-[0.25em] uppercase">
               KONCEPT & POPIS DIELA
             </div>
-            <div className="lg:col-span-8 text-lg sm:text-xl font-light text-[#1b1e23] leading-relaxed whitespace-pre-line space-y-6 max-w-3xl">
+            <div className="lg:col-span-8 text-lg sm:text-xl font-light text-white leading-relaxed whitespace-pre-line space-y-6 max-w-3xl">
               {project.description}
             </div>
           </div>
@@ -157,14 +157,14 @@ export default async function ProjectDetailPage({ params }: Props) {
           <div className="pt-20 md:pt-28 border-t border-[#ded9cd] space-y-16">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 border-b border-[#ded9cd] pb-6">
               <div className="space-y-2">
-                <span className="font-mono text-xs tracking-[0.3em] uppercase text-[#737882] block">
+                <span className="font-mono text-xs tracking-[0.3em] uppercase text-charcoal block">
                   VÝKRESOVÁ ČASŤ
                 </span>
-                <h2 className="text-2xl sm:text-4xl font-light uppercase tracking-tight text-[#0a0b0d]">
+                <h2 className="text-2xl sm:text-4xl font-light uppercase tracking-tight text-white">
                   ARCHITEKTONICKÉ VÝKRESY & PÔDORYSY
                 </h2>
               </div>
-              <span className="font-mono text-xs text-[#737882] uppercase">
+              <span className="font-mono text-xs text-charcoal uppercase">
                 AXONOMETRIE / PÔDORYSY / REZY
               </span>
             </div>
@@ -173,8 +173,8 @@ export default async function ProjectDetailPage({ params }: Props) {
               {project.sections.map((section, sIdx) => (
                 <div key={sIdx} className="space-y-6">
                   {section.title && (
-                    <div className="font-mono text-xs uppercase tracking-[0.25em] text-[#0a0b0d] flex items-center gap-3">
-                      <span className="w-1.5 h-1.5 bg-[#0a0b0d]" />
+                    <div className="font-mono text-xs uppercase tracking-[0.25em] text-charcoal flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 bg-white" />
                       <span>{section.title}</span>
                     </div>
                   )}
@@ -195,7 +195,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                             unoptimized
                           />
                         </div>
-                        <div className="pt-3 font-mono text-[10px] text-[#737882] flex justify-between border-t border-[#ded9cd]">
+                        <div className="pt-3 font-mono text-[10px] text-charcoal flex justify-between border-t border-[#ded9cd]">
                           <span className="uppercase">{section.title}</span>
                           <span>VÝKRES {sIdx + 1}.{iIdx + 1}</span>
                         </div>
@@ -213,14 +213,14 @@ export default async function ProjectDetailPage({ params }: Props) {
           <div className="pt-20 md:pt-28 border-t border-[#ded9cd] space-y-12">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 border-b border-[#ded9cd] pb-6">
               <div className="space-y-2">
-                <span className="font-mono text-xs tracking-[0.3em] uppercase text-[#737882] block">
+                <span className="font-mono text-xs tracking-[0.3em] uppercase text-charcoal block">
                   REALIZÁCIA
                 </span>
                 <h2 className="text-2xl sm:text-4xl font-light uppercase tracking-tight text-[#0a0b0d]">
                   FOTOGALÉRIA DETAILOV
                 </h2>
               </div>
-              <span className="font-mono text-xs text-[#737882] uppercase">
+              <span className="font-mono text-xs text-charcoal uppercase">
                 {project.gallery.length} ZÁBEROV
               </span>
             </div>
@@ -251,29 +251,6 @@ export default async function ProjectDetailPage({ params }: Props) {
           </div>
         )}
 
-        {/* Project Lead CTA Card */}
-        <div className="border border-[#0a0b0d] bg-[#0a0b0d] text-[#f5f4ef] p-8 sm:p-12 md:p-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-          <div className="space-y-3">
-            <span className="font-mono text-xs tracking-[0.3em] uppercase text-[#88909e] block">
-              ZAUJAL VÁS TENTO PROJEKT?
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-light uppercase">
-              PLÁNUJETE VLASTNÚ STAVBU ALEBO REKONŠTRUKCIU?
-            </h3>
-            <p className="text-sm text-[#9ba2af] max-w-xl font-light">
-              Rovnakú pozornosť venujeme každému novému zadaniu. Radi s vami preberieme možnosti
-              vášho zámeru pri nezáväznej osobnej konzultácii.
-            </p>
-          </div>
-
-          <Link
-            href="/kontakt"
-            className="bg-[#f5f4ef] text-[#0a0b0d] hover:bg-white px-8 py-4 font-mono text-xs tracking-[0.25em] uppercase transition-all"
-          >
-            DOHODNÚŤ STRETNUTIE →
-          </Link>
-        </div>
-
         {/* Bottom Project Pagination Switcher */}
         <div className="pt-12 border-t border-[#ded9cd] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
           <Link
@@ -286,7 +263,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           {nextProject && (
             <Link
               href={`/projekty/${nextProject.slug}`}
-              className="font-mono text-xs uppercase tracking-[0.25em] border border-[#0a0b0d] px-6 py-3.5 hover:bg-[#0a0b0d] hover:text-[#f5f4ef] transition-all"
+              className="font-mono text-xs uppercase tracking-[0.25em] border-t-[0.5] rounded-full border-charcoal px-6 py-3.5 hover:bg-[#0a0b0d] hover:text-[#f5f4ef] transition-all"
             >
               ĎALŠÍ PROJEKT: {nextProject.title} →
             </Link>

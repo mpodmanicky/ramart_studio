@@ -10,25 +10,25 @@ export const metadata: Metadata = {
 
 export default function AtelierPage() {
   return (
-    <main className="min-h-screen bg-[#f5f4ef] text-[#0a0b0d] pt-16 md:pt-28 pb-32">
+    <main className="min-h-screen text-white pt-16 md:pt-28 pb-32">
       <div className="max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 space-y-24 md:space-y-36">
-        
+
         {/* Page Header: Lots of Space & Monumental Headline */}
         <div className="border-b border-[#ded9cd] pb-16 space-y-6">
-          <div className="flex items-center gap-3 font-mono text-[11px] text-[#737882] tracking-[0.3em] uppercase">
-            <span className="w-2 h-2 bg-[#0a0b0d]" />
+          <div className="flex items-center gap-3 font-mono text-[11px] text-charcoal tracking-[0.3em] uppercase">
+            <span className="w-2 h-2 bg-white" />
             <span>ATELIÉR ARCHITEKTÚRY / AUTORSKÁ PRAX</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
             <div className="lg:col-span-8">
-              <h1 className="text-4xl sm:text-6xl md:text-8xl font-light uppercase tracking-tight text-[#0a0b0d] leading-[0.95]">
+              <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold uppercase tracking-tight text-white leading-[0.95]">
                 PRAVDA <br />
                 MATERIÁLU.
               </h1>
             </div>
             <div className="lg:col-span-4">
-              <p className="text-base sm:text-lg font-light text-[#525760] leading-relaxed">
+              <p className="text-base sm:text-lg font-light text-charcoal leading-relaxed">
                 Stavba nie je kulisa. Je to trvalý zásah do krajiny. Veríme v architektúru,
                 ktorá priznáva svoju konštrukciu a materiály bez zbytočného nánosu dekorácií.
               </p>
@@ -38,7 +38,7 @@ export default function AtelierPage() {
 
         {/* Architect Profile Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
-          
+
           <div className="lg:col-span-5 space-y-8">
             <div className="relative w-full aspect-[4/5] overflow-hidden">
               <Image
@@ -51,7 +51,7 @@ export default function AtelierPage() {
             </div>
 
             <div className="font-mono text-xs text-[#737882] space-y-2 border-t border-[#ded9cd] pt-4">
-              <p className="text-[#0a0b0d] font-semibold tracking-wider uppercase">
+              <p className="text-white font-semibold tracking-wider uppercase">
                 ING. ARCH. MARTIN RAJČAN
               </p>
               <p>ZAKLADATEĽ & HLAVNÝ ARCHITEKT ATELIÉRU</p>
@@ -61,15 +61,15 @@ export default function AtelierPage() {
           </div>
 
           <div className="lg:col-span-7 space-y-8">
-            <span className="font-mono text-xs tracking-[0.3em] uppercase text-[#737882] block">
+            <span className="font-mono text-xs tracking-[0.3em] uppercase text-charcoal block">
               AUTORSKÝ MANIFEST
             </span>
 
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-light uppercase text-[#0a0b0d] leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-light uppercase text-white leading-snug">
               OD PRVÉHO NÁČRTU PO DETAIL SKRUTKY.
             </h2>
 
-            <div className="space-y-6 text-base sm:text-lg font-light text-[#2b2f36] leading-relaxed">
+            <div className="space-y-6 text-base sm:text-lg font-light text-charcoal leading-relaxed">
               <p>
                 Ateliér Ramart Studio bol založený v roku 2013 autorizovaným architektom
                 Ing. arch. Martinom Rajčanom po ukončení štúdia na Fakulte architektúry STU v Bratislave.
@@ -89,13 +89,13 @@ export default function AtelierPage() {
             <div className="pt-6 border-t border-[#ded9cd] flex flex-wrap gap-4 font-mono text-xs">
               <Link
                 href="/portfolio"
-                className="border border-[#0a0b0d] bg-[#0a0b0d] text-[#f5f4ef] hover:bg-transparent hover:text-[#0a0b0d] px-6 py-3.5 tracking-[0.25em] uppercase transition-all"
+                className="border-t-[0.5] border-charcoal bg-white text-gunpowder rounded-full hover:bg-transparent hover:text-white px-6 py-3.5 tracking-[0.25em] uppercase transition-all"
               >
                 PREZRIEŤ REALIZÁCIE →
               </Link>
               <Link
                 href="/kontakt"
-                className="border border-[#0a0b0d] text-[#0a0b0d] hover:bg-[#0a0b0d] hover:text-[#f5f4ef] px-6 py-3.5 tracking-[0.2em] uppercase transition-all"
+                className="border-t-[0.5] border-charcoal text-charcoal hover:bg-gunpowder rounded-full hover:text-white px-6 py-3.5 tracking-[0.2em] uppercase transition-all"
               >
                 KONZULTOVAŤ ZÁMER
               </Link>
@@ -106,30 +106,30 @@ export default function AtelierPage() {
 
         {/* Modern Materials Philosophy (NO feature rows, editorial structure) */}
         <div className="border-t border-[#ded9cd] pt-24 space-y-16">
-          
+
           <div className="space-y-4 max-w-3xl">
             <span className="font-mono text-xs tracking-[0.3em] uppercase text-[#737882] block">
               PRÁCA S MATERIÁLOM
             </span>
-            <h2 className="text-3xl sm:text-5xl font-light uppercase tracking-tight text-[#0a0b0d]">
+            <h2 className="text-3xl sm:text-5xl font-light uppercase tracking-tight text-white">
               MODERNÉ MATERIÁLY & TRVÁCNOSŤ
             </h2>
-            <p className="text-base text-[#525760] font-light">
+            <p className="text-base text-charcoal font-light">
               Materiál musí hovoriť pravdu o svojej povahe. Netajíme štruktúru betónu ani kresbu dreva.
             </p>
           </div>
 
           <div className="divide-y divide-[#ded9cd] border-y border-[#ded9cd]">
-            
+
             <div className="py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-baseline">
-              <div className="md:col-span-3 font-mono text-sm tracking-widest text-[#0a0b0d] uppercase">
+              <div className="md:col-span-3 font-mono text-sm tracking-widest text-white uppercase">
                 01 / POHĽADOVÝ BETÓN
               </div>
               <div className="md:col-span-9 space-y-2">
-                <h3 className="text-xl font-light uppercase text-[#0a0b0d]">
+                <h3 className="text-xl font-light uppercase text-white">
                   Monolitická stabilita & surová textúra
                 </h3>
-                <p className="text-sm font-light text-[#525760] leading-relaxed">
+                <p className="text-sm font-light text-charcoal leading-relaxed">
                   Železobetónové nosné steny a stropy s priznanou textúrou doskového alebo hladkého debnenia.
                   Vytvárajú akumulačné jadro domu s vynikajúcou tepelnou zotrvačnosťou a neopakovateľnou estetikou.
                 </p>
@@ -137,14 +137,14 @@ export default function AtelierPage() {
             </div>
 
             <div className="py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-baseline">
-              <div className="md:col-span-3 font-mono text-sm tracking-widest text-[#0a0b0d] uppercase">
+              <div className="md:col-span-3 font-mono text-sm tracking-widest text-white uppercase">
                 02 / LOMOVÝ KAMEŇ & BRIDLICA
               </div>
               <div className="md:col-span-9 space-y-2">
-                <h3 className="text-xl font-light uppercase text-[#0a0b0d]">
+                <h3 className="text-xl font-light uppercase text-white">
                   Tektonické ukotvenie v krajine
                 </h3>
-                <p className="text-sm font-light text-[#525760] leading-relaxed">
+                <p className="text-sm font-light text-charcoal leading-relaxed">
                   Použitie masívneho prírodného kameňa na sokloch a obvodových stenách odkazuje na tradičné
                   stavebné remeslo stredného Slovenska, no v moderných kubických a stodolových formách.
                 </p>
@@ -152,14 +152,14 @@ export default function AtelierPage() {
             </div>
 
             <div className="py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-baseline">
-              <div className="md:col-span-3 font-mono text-sm tracking-widest text-[#0a0b0d] uppercase">
+              <div className="md:col-span-3 font-mono text-sm tracking-widest text-white uppercase">
                 03 / VEĽKOFORMÁTOVÉ SKLO
               </div>
               <div className="md:col-span-9 space-y-2">
-                <h3 className="text-xl font-light uppercase text-[#0a0b0d]">
+                <h3 className="text-xl font-light uppercase text-white">
                   Plynulé stieranie hranice medzi interiérom a exteriérom
                 </h3>
-                <p className="text-sm font-light text-[#525760] leading-relaxed">
+                <p className="text-sm font-light text-charcoal leading-relaxed">
                   Panoramatické trojsklá s minimálnymi rámami, zapustené vodiace lišty posuvných systémov HS-portal
                   a bezrámové rohové zasklenia prinášajú záhradu priamo do obytného priestoru.
                 </p>
@@ -167,14 +167,14 @@ export default function AtelierPage() {
             </div>
 
             <div className="py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-baseline">
-              <div className="md:col-span-3 font-mono text-sm tracking-widest text-[#0a0b0d] uppercase">
+              <div className="md:col-span-3 font-mono text-sm tracking-widest text-white uppercase">
                 04 / MASÍVNY DUB & REMESELNÉ DREVO
               </div>
               <div className="md:col-span-9 space-y-2">
-                <h3 className="text-xl font-light uppercase text-[#0a0b0d]">
+                <h3 className="text-xl font-light uppercase text-white">
                   Taktilné teplo domova a akustická pohoda
                 </h3>
-                <p className="text-sm font-light text-[#525760] leading-relaxed">
+                <p className="text-sm font-light text-charcoal leading-relaxed">
                   Drevené fasádne lamely, masívne parkety a autorský nábytok na mieru. Drevo vyvažuje
                   chlad betónu a kameňa a dodáva priestoru intímny, útulný charakter.
                 </p>

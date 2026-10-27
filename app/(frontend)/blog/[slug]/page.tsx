@@ -30,7 +30,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | Žurnál Ramart Studio`,
+    title: `${post.title} | Blog Ramart Studio`,
     description: post.excerpt,
   }
 }
@@ -49,18 +49,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <article className="pt-28 md:pt-36 pb-32">
       <div className="max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 space-y-12 md:space-y-16">
-        
+
         {/* Top Navigation & Meta */}
         <FadeIn>
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-[#ded9cd] pb-6 font-mono text-xs uppercase tracking-[0.25em] text-[#737882]">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-[#ded9cd] pb-6 font-mono text-xs uppercase tracking-[0.25em] text-white">
             <Link
               href="/blog"
-              className="hover:text-[#0a0b0d] transition-colors flex items-center gap-2"
+              className="hover:text-charcoal transition-colors flex items-center gap-2"
             >
               ← SPÄŤ NA ŽURNÁL
             </Link>
             <div className="flex items-center gap-4">
-              <span className="text-[#0a0b0d] font-semibold">{post.category}</span>
+              <span className="text-charcoal font-semibold">{post.category}</span>
               <span>/</span>
               <span>{post.publishedDate}</span>
             </div>
@@ -70,10 +70,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Title & Excerpt */}
         <FadeIn delay={0.1}>
           <div className="max-w-4xl space-y-8">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light uppercase tracking-tight text-[#0a0b0d] leading-[1.08]">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light uppercase tracking-tight text-white leading-[1.08]">
               {post.title}
             </h1>
-            <p className="text-lg sm:text-2xl font-light text-[#525760] leading-relaxed">
+            <p className="text-lg sm:text-2xl font-light text-charcoal leading-relaxed">
               {post.excerpt}
             </p>
           </div>
@@ -97,22 +97,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 pt-6">
           {/* Left Column: Author and Metadata */}
           <div className="lg:col-span-4 space-y-8 font-mono text-xs">
-            <div className="border-t border-[#ded9cd] pt-6 space-y-2 text-[#737882]">
+            <div className="border-t border-[#ded9cd] pt-6 space-y-2 text-white">
               <span className="text-[10px] uppercase tracking-wider block">AUTOR TEXTU</span>
-              <p className="text-[#0a0b0d] font-semibold text-sm">{post.author}</p>
-              <p>AUTORIZOVANÝ ARCHITEKT SKA 2013</p>
-              <p>RAMART ATELIÉR, BANSKÁ BYSTRICA</p>
+              <p className="text-charcoal font-semibold text-sm">{post.author}</p>
+              <p>RAMART STUDIO, BANSKÁ BYSTRICA</p>
             </div>
 
-            <div className="border-t border-[#ded9cd] pt-6 space-y-2 text-[#737882]">
+            <div className="border-t border-[#ded9cd] pt-6 space-y-2 text-white">
               <span className="text-[10px] uppercase tracking-wider block">TÉMA & ZAMERANIE</span>
-              <p className="text-[#0a0b0d] font-sans text-sm capitalize">{post.category}</p>
+              <p className="text-charcoal font-sans text-sm capitalize">{post.category}</p>
             </div>
 
             <div className="border-t border-[#ded9cd] pt-6">
               <Link
                 href="/kontakt"
-                className="inline-block border border-[#0a0b0d] px-6 py-3 uppercase tracking-[0.2em] text-[#0a0b0d] hover:bg-[#0a0b0d] hover:text-[#f5f4ef] transition-all text-[11px]"
+                className="inline-block border border-[#0a0b0d] px-6 py-3 uppercase tracking-[0.2em] text-white hover:text-charcoal transition-all text-[11px]"
               >
                 KONZULTOVAŤ ZÁMER →
               </Link>
@@ -130,16 +129,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="pt-20 md:pt-28 border-t border-[#ded9cd] space-y-12">
             <div className="flex justify-between items-end border-b border-[#ded9cd] pb-6">
               <div className="space-y-2">
-                <span className="font-mono text-xs tracking-[0.3em] uppercase text-[#737882] block">
+                <span className="font-mono text-xs tracking-[0.3em] uppercase text-charcoal block">
                   ĎALŠIE ČÍTANIE
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-light uppercase tracking-tight text-[#0a0b0d]">
-                  SÚVISIACE ESEJE & ŠTÚDIE
+                <h2 className="text-2xl sm:text-3xl font-light uppercase tracking-tight text-white">
+                  SÚVISIACE Príspevky & štúdie
                 </h2>
               </div>
               <Link
                 href="/blog"
-                className="font-mono text-xs tracking-[0.2em] uppercase text-[#0a0b0d] hover:text-[#525760] transition-colors"
+                className="font-mono text-xs tracking-[0.2em] uppercase text-white hover:text-charcoal transition-colors"
               >
                 VŠETKY ČLÁNKY →
               </Link>
@@ -162,10 +161,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     />
                   </div>
                   <div className="space-y-2">
-                    <span className="font-mono text-[11px] text-[#737882] uppercase tracking-widest block">
+                    <span className="font-mono text-[11px] text-charcoal uppercase tracking-widest block">
                       {other.publishedDate} / {other.category}
                     </span>
-                    <h3 className="text-xl font-light uppercase tracking-tight text-[#0a0b0d] group-hover:text-[#525760] transition-colors leading-snug">
+                    <h3 className="text-xl font-light uppercase tracking-tight text-white group-hover:text-charcoal transition-colors leading-snug">
                       {other.title}
                     </h3>
                   </div>

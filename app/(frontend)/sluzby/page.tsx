@@ -90,25 +90,25 @@ const SERVICES = [
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-[#f5f4ef] text-[#0a0b0d] pt-16 md:pt-28 pb-32">
+    <main className="min-h-screen text-white pt-16 md:pt-28 pb-32">
       <div className="max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 space-y-20 md:space-y-32">
-        
+
         {/* Page Header */}
-        <div className="border-b border-[#ded9cd] pb-16 space-y-6">
-          <div className="flex items-center gap-3 font-mono text-[11px] text-[#737882] tracking-[0.3em] uppercase">
-            <span className="w-2 h-2 bg-[#0a0b0d]" />
+        <div className="pb-16 space-y-6">
+          <div className="flex items-center gap-3 font-mono text-[11px] text-charcoal tracking-[0.3em] uppercase">
+            <span className="w-2 h-2 bg-white" />
             <span>ROZSAH ARCHITEKTONICKEJ ČINNOSTI</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
             <div className="lg:col-span-8">
-              <h1 className="text-4xl sm:text-6xl md:text-8xl font-light uppercase tracking-tight text-[#0a0b0d] leading-[0.95]">
+              <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold uppercase tracking-tight text-white leading-[0.95]">
                 KOMPLEXNÉ <br />
                 SLUŽBY.
               </h1>
             </div>
             <div className="lg:col-span-4">
-              <p className="text-base sm:text-lg font-light text-[#525760] leading-relaxed">
+              <p className="text-base sm:text-lg font-light text-charcoal] leading-relaxed">
                 Prevedieme váš zámer od počiatočného auditu pozemku cez tvorivú architektonickú
                 štúdiu až po kolaudáciu dokončenej stavby s garanciou autorského dozoru.
               </p>
@@ -124,34 +124,34 @@ export default function ServicesPage() {
               className="py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start"
             >
               {/* Number and Step */}
-              <div className="lg:col-span-2 font-mono text-sm tracking-widest text-[#737882]">
+              <div className="lg:col-span-2 font-mono text-sm tracking-widest text-charcoal">
                 ROZSAH / {s.number}
               </div>
 
               {/* Title & Subtitle */}
               <div className="lg:col-span-4 space-y-3">
-                <h2 className="text-2xl sm:text-3xl font-light uppercase text-[#0a0b0d] leading-snug">
+                <h2 className="text-2xl sm:text-3xl font-light uppercase text-white leading-snug">
                   {s.title}
                 </h2>
-                <p className="font-mono text-xs text-[#737882] uppercase tracking-wider">
+                <p className="font-mono text-xs text-charcoal uppercase tracking-wider">
                   {s.subtitle}
                 </p>
               </div>
 
               {/* Description & Deliverables */}
               <div className="lg:col-span-6 space-y-6">
-                <p className="text-base font-light text-[#32363e] leading-relaxed">
+                <p className="text-base font-light text-charcoal/50 leading-relaxed">
                   {s.description}
                 </p>
 
                 <div className="border-t border-[#ded9cd]/60 pt-4 space-y-2">
-                  <span className="font-mono text-[11px] text-[#737882] tracking-widest uppercase block">
+                  <span className="font-mono text-[11px] text-charcoal tracking-widest uppercase block">
                     VÝSTUPNÁ DOKUMENTÁCIA:
                   </span>
-                  <ul className="space-y-1.5 font-mono text-xs text-[#525760]">
+                  <ul className="space-y-1.5 font-mono text-xs text-charcoal">
                     {s.deliverables.map((item, idx) => (
                       <li key={idx} className="flex items-baseline gap-2">
-                        <span className="text-[#0a0b0d]">—</span>
+                        <span className="text-white">—</span>
                         <span>{item}</span>
                       </li>
                     ))}
@@ -180,7 +180,7 @@ export default function ServicesPage() {
           <div className="lg:col-span-4 flex flex-col justify-end items-start lg:items-end gap-4">
             <Link
               href="/kontakt"
-              className="bg-[#f5f4ef] text-[#0a0b0d] hover:bg-white px-8 py-4 font-mono text-xs tracking-[0.25em] uppercase transition-all"
+              className="border-t-[0.5] border-charcoal rounded-full bg-gunpowder text-white hover:bg-transparent px-8 py-4 font-mono text-xs tracking-[0.25em] uppercase transition-all"
             >
               KONTAKTOVAŤ ATELIÉR →
             </Link>

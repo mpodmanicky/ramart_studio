@@ -8,6 +8,9 @@
   --color-bone-muted: #e2ded5;
   --color-bone-border: #ded9cd;
 
+  --color-charcoal: #a2a2a2;
+  --color-gunpowder: #101010;
+
   --color-anthracite: #181a1d;
   --color-anthracite-light: #23272d;
   --color-anthracite-dark: #0f1113;
@@ -23,12 +26,11 @@
 }
 
 :root {
-  --background: #f5f4ef;
-  --foreground: #0a0b0d;
+  --background: #101010;
+  --foreground: #ffffff;
 }
 
 body {
-  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
@@ -36,9 +38,9 @@ body {
 }
 
 /* Strict architectural lines and sharp zero border radius */
-* {
+/* * {
   border-radius: 0 !important;
-}
+} */
 
 ::selection {
   background-color: #181a1d;
@@ -73,7 +75,7 @@ body {
  * Lexical RichText Architectural Editorial Styling
  * ───────────────────────────────────────────────────────────────────────────── */
 .rich-text-content {
-  color: #1b1e23;
+  color: var(--color-foreground);
   line-height: 1.8;
   font-weight: 300;
 }

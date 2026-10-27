@@ -105,8 +105,8 @@ export default function PortfolioGrid({ projects }: { projects: Project[] }) {
                 }}
                 className={`relative py-1 transition-colors cursor-pointer ${
                   isActive
-                    ? 'text-[#0a0b0d] font-semibold'
-                    : 'text-[#737882] hover:text-[#0a0b0d]'
+                    ? 'text-white font-semibold'
+                    : 'text-[#737882] hover:text-charcoal'
                 }`}
               >
                 {f.label}
