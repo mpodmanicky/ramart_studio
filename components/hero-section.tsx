@@ -70,7 +70,7 @@ export default function HeroSection() {
       >
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tighter leading-[0.96] text-foreground">
           RAMART<br />
-          <span className="text-[#68707d]">STUDIO</span> <br />
+          <span className="text-charcoal font-light">STUDIO</span> <br />
         </h1>
 
         <div className="gap-8 pt-6 px-6 max-w-3xl">
@@ -87,7 +87,7 @@ export default function HeroSection() {
             >
               PREZRIEŤ PORTFÓLIO →
             </Link>
-            <span className="tracking-widest uppercase text-[14px] text-[#737882]">
+            <span className="tracking-widest uppercase text-[14px] text-charcoal/50">
               12 KOMPLETNÝCH ARCHITEKTONICKÝCH REALIZÁCIÍ
             </span>
           </div>

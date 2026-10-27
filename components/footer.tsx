@@ -15,7 +15,7 @@ export default function Footer() {
               ZÁMER / DIALÓG / REALIZÁCIA
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter leading-[1.1] text-white">
-              RAMARTSTUDIO
+              RAMART<span className="font-light">STUDIO</span>
             </h2>
             <p className="text-sm md:text-base text-charcoal max-w-2xl font-light leading-relaxed">
               Pracujeme s poctivými materiálmi — monolitický betón, prírodný kameň, oceľ a masívne drevo.

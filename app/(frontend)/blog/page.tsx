@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Žurnál & Architektonický diskurz | Ramart Studio',
   description:
     'Úvahy o priestore, procesoch navrhovania rodinných domov, poctivých materiáloch a realizáciách z ateliéru Ing. arch. Martina Rajčana.',
+  alternates: {
+    canonical: '/blog',
+  },
 }
 
 export default async function BlogPage() {

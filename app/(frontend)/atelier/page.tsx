@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Ateliér & Prístup | Ramart Ateliér',
   description:
     'Autorský ateliér Ing. arch. Martina Rajčana. Architektúra s rešpektom k moderným materiálom, proporcii a kontextu územia.',
+  alternates: {
+    canonical: '/atelier',
+  },
 }
 
 export default function AtelierPage() {

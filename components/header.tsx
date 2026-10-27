@@ -66,7 +66,7 @@ export default function Header() {
           <div className="flex items-center gap-4 md:gap-8">
             <Link href="/" className="group block focus:outline-none">
               <span className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tighter uppercase text-white transition-colors">
-                RAMARTSTUDIO
+                RAMART<span className="font-light">STUDIO</span>
               </span>
             </Link>
 
@@ -78,7 +78,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8 lg:gap-12">
+          <nav className="hidden lg:flex items-center gap-8 lg:gap-12">
             {NAVIGATION.map((item) => {
               const isActive =
                 pathname === item.href ||
@@ -104,7 +104,7 @@ export default function Header() {
           </nav>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

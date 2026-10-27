@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#101010" rx="96"/>
+  <!-- Architectural grid guide lines (subtle) -->
+  <line x1="80" y1="432" x2="432" y2="432" stroke="#23272e" stroke-width="2"/>
+  <line x1="80" y1="80" x2="432" y2="80" stroke="#23272e" stroke-width="2"/>
+  <!-- Architectural R Monogram -->
+  <path d="M 140 120 L 290 120 C 355 120 395 155 395 210 C 395 258 360 290 300 298 L 398 392 L 328 392 L 244 298 L 204 298 L 204 392 L 140 392 Z M 204 176 L 204 242 L 285 242 C 318 242 334 228 334 209 C 334 190 318 176 285 176 Z" fill="#ffffff"/>
+  <!-- Minimalist Architectural Stone Dot -->
+  <circle cx="415" cy="385" r="14" fill="#a2a2a2"/>
+</svg>
+

@@ -28,17 +28,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${project.title} | Ramart Ateliér`,
     description: `${project.title} — ${project.categories.join(', ')}. Architektonické dielo Ing. arch. Martina Rajčana.`,
+    alternates: {
+      canonical: `/projekty/${slug}`,
+    },
     openGraph: {
-      title: `${project.title} | Ramart Ateliér`,
+      title: `${project.title} | RAMART ATELIÉR`,
       description: `${project.title} — ${project.categories.join(', ')}`,
+      url: `https://www.ramartstudio.sk/projekty/${slug}`,
       images: [
         {
-          url: project.image,
+          url: '/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: project.title,
+          alt: 'RAMART ATELIÉR | Architektonické štúdio Ing. arch. Martin Rajčan',
         },
       ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} | RAMART ATELIÉR`,
+      description: `${project.title} — ${project.categories.join(', ')}`,
+      images: ['/og-image.jpg'],
     },
   }
 }

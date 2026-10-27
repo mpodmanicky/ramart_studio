@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Portfólio Realizácií | Ramart Ateliér',
   description:
     'Kompletný archív architektonických projektov a realizácií: rodinné domy, novostavby, rekonštrukcie, interiéry a urbanistické štúdie od Ing. arch. Martina Rajčana.',
+  alternates: {
+    canonical: '/portfolio',
+  },
 }
 
 export default async function PortfolioPage() {

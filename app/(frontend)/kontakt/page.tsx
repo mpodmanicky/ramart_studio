@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Kontakt & Konzultácia | Ramart Ateliér',
   description:
     'Kontaktné údaje architektonického ateliéru Ramart Studio v Banskej Bystrici. Lazovná 43. Tel: +421 908 477 417, email: martin@ramartstudio.sk.',
+  alternates: {
+    canonical: '/kontakt',
+  },
 }
 
 export default function ContactPage() {

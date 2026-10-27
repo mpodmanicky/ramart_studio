@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'RAMART ATELIÉR | Architektúra & Realizácie Ing. arch. Martin Rajčan',
   description:
     'Architektonický ateliér Ing. arch. Martina Rajčana v Banskej Bystrici. Autorské rodinné domy, novostavby a rekonštrukcie s dôrazom na moderné materiály a individuálny prístup.',
+  alternates: {
+    canonical: '/',
+  },
 }
 
 export default async function HomePage() {

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Architektonické Služby | Ramart Ateliér',
   description:
     'Komplexné architektonické služby od architektonickej štúdie cez projekt pre stavebné povolenie a realizačný projekt až po autorský dozor na stavbe.',
+  alternates: {
+    canonical: '/sluzby',
+  },
 }
 
 const SERVICES = [

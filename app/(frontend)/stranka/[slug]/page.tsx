@@ -22,6 +22,28 @@ export async function generateMetadata({
   return {
     title: `${page.title} | Ramart Studio`,
     description: page.metaDescription,
+    alternates: {
+      canonical: `/stranka/${slug}`,
+    },
+    openGraph: {
+      title: `${page.title} | RAMART ATELIÉR`,
+      description: page.metaDescription || undefined,
+      url: `https://www.ramartstudio.sk/stranka/${slug}`,
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'RAMART ATELIÉR | Architektonické štúdio Ing. arch. Martin Rajčan',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${page.title} | RAMART ATELIÉR`,
+      description: page.metaDescription || undefined,
+      images: ['/og-image.jpg'],
+    },
   }
 }
 
