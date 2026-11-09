@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import InquiryForm from '@/components/inquiry-form'
 
 export const metadata: Metadata = {
   title: 'Kontakt & Konzultácia | Ramart Ateliér',
@@ -12,11 +11,11 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen text-white pt-16 md:pt-28 pb-32">
-      <div className="max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 space-y-20 md:space-y-32">
+    <main className="min-h-screen text-white pt-28 sm:pt-32 md:pt-36 pb-24 md:pb-32">
+      <div className="max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 space-y-16 md:space-y-24">
 
         {/* Page Header */}
-        <div className="border-b border-[#ded9cd] pb-16 space-y-6">
+        <div className="border-b border-[#ded9cd] pb-12 md:pb-16 space-y-6">
           <div className="flex items-center gap-3 font-mono text-[11px] text-charcoal tracking-[0.3em] uppercase">
             <span className="w-2 h-2 bg-white" />
             <span>DIALÓG / ZADANIE / ATELIÉR</span>
@@ -41,7 +40,7 @@ export default function ContactPage() {
         {/* Studio Contact Data Grid (Strictly NO icons, purely architectural typography) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
 
-          <div className="border-t-[0.5] backdrop-blur-md border-charcoal bg-gunpowder rounded-4xl p-8 space-y-4">
+          <div className="border-t-[0.5] backdrop-blur-md border-charcoal bg-gunpowder rounded-4xl p-6 sm:p-8 space-y-4">
             <span className="font-mono text-xs tracking-[0.3em] uppercase text-charcoal block">
               01 / SÍDLO ATELIÉRU
             </span>
@@ -58,7 +57,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="border-t-[0.5] backdrop-blur-md border-charcoal bg-gunpowder rounded-4xl p-8 space-y-4">
+          <div className="border-t-[0.5] backdrop-blur-md border-charcoal bg-gunpowder rounded-4xl p-6 sm:p-8 space-y-4">
             <span className="font-mono text-xs tracking-[0.3em] uppercase text-charcoal block">
               02 / PRIAMY KONTAKT
             </span>
@@ -89,7 +88,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="border-t-[0.5] backdrop-blur-md border-charcoal bg-gunpowder rounded-4xl p-8 space-y-4">
+          <div className="border-t-[0.5] backdrop-blur-md border-charcoal bg-gunpowder rounded-4xl p-6 sm:p-8 space-y-4">
             <span className="font-mono text-xs tracking-[0.3em] uppercase text-charcoal block">
               03 / FAKTURAČNÉ ÚDAJE
             </span>
@@ -108,7 +107,7 @@ export default function ContactPage() {
         </div>
 
         {/* Atelier Map Location */}
-        <div className="space-y-4 pt-12 border-t border-[#ded9cd] rounded-4xl px-6">
+        <div className="space-y-4 pt-12 border-t border-[#ded9cd]">
           <div className="flex justify-between items-center font-mono text-xs text-charcoal uppercase tracking-wider">
             <span>ORIENTÁCIA V MESTE / HISTORICKÉ CENTRUM</span>
             <span>LAZOVNÁ 43, BANSKÁ BYSTRICA</span>
@@ -116,14 +115,12 @@ export default function ContactPage() {
 
           <div className="border border-[#ded9cd] overflow-hidden bg-[#eae7df]">
             <iframe
-              className="w-full contrast-125"
+              className="w-full contrast-125 border-0"
               height="450"
-              frameBorder="0"
-              scrolling="no"
-              marginHeight={0}
-              marginWidth={0}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
               title="Ramart Studio Banská Bystrica"
-              src="https://maps.google.com/maps?width=100%25&amp;height=450&amp;hl=sk&amp;q=lazovna%2043%20Banska%20Bystrica+(Ramart%20Studio)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              src="https://maps.google.com/maps?q=Lazovn%C3%A1+43%2C+974+01+Bansk%C3%A1+Bystrica&amp;hl=sk&amp;t=m&amp;z=16&amp;output=embed"
             />
           </div>
         </div>

@@ -96,7 +96,7 @@ export default function HomeProjectMosaic({ projects }: { projects: Project[] })
 
                 {/* Scrollovateľný blok textu */}
                 <div
-                  className="flex-1 min-h-0 overflow-y-auto overscroll-contain architectural-scroll my-3 pr-2 space-y-3"
+                  className="flex-1 min-h-0 overflow-y-auto overscroll-y-auto architectural-scroll my-3 pr-2 space-y-3"
                   onClick={(e) => {
                     if (isTouchActive) {
                       e.preventDefault()

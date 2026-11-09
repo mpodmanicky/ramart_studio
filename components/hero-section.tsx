@@ -35,7 +35,7 @@ export default function HeroSection() {
             alt="Rodinný dom Žarnovica - Ramart Ateliér"
             fill
             priority
-            unoptimized
+            sizes="100vw"
             className="object-cover object-center"
           />
 

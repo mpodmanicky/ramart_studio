@@ -194,7 +194,7 @@ export default function PortfolioGrid({ projects }: { projects: Project[] }) {
 
                     {/* Middle: Scrollovateľný blok s plným popisom diela */}
                     <div
-                      className="flex-1 min-h-0 overflow-y-auto overscroll-contain architectural-scroll my-3 pr-2 space-y-3"
+                      className="flex-1 min-h-0 overflow-y-auto overscroll-y-auto architectural-scroll my-3 pr-2 space-y-3"
                       onClick={(e) => {
                         // Na dotykovom zariadení pri otvorenom overlay zamedzíme neúmyselnému prekliknutiu pri posúvaní textu
                         if (isTouchActive) {
